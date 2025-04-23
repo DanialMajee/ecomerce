@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoverball</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+
+        header {
+            background-color: black;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #f39c12;
+        }
+
+
+        main {
+            padding: 20px 50px;
+        }
+
+        .product-container {
+            display: flex;
+            gap: 50px;
+            margin-top: 20px;
+        }
+
+        .product-gallery {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-image img {
+            width: 400px;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .alternate-images {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .alternate-images img {
+            width: 80px;
+            height: 80px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        .alternate-images img:hover {
+            border-color: #007bff;
+        }
+
+        .product-details {
+            flex: 1;
+        }
+
+        .product-details h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: black;
+        }
+
+        .price {
+            font-size: 22px;
+            color: black;
+            font-weight: bold;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: red;
+            margin-left: 10px;
+        }
+
+        .short-description {
+            margin: 20px 0;
+        }
+
+        .short-description p {
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .short-description img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .quantity-container {
+            margin: 20px 0;
+        }
+
+        .quantity-container label {
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        .quantity-container input {
+            width: 80px;
+            text-align: center;
+            padding: 5px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .action-buttons {
+            margin-top: 20px;
+        }
+
+        .action-buttons a {
+            display: inline-block;
+            padding: 10px 60px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-right: 10px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .add-to-cart {
+            background-color: transparent;
+            border: 2px solid black;
+            color: black;
+        }
+
+        .add-to-cart:hover {
+            background-color: #333;
+            color: white;
+        }
+
+        .buy-now {
+            background-color: black;
+            color: white;
+            border: 2px solid black;
+        }
+
+        .buy-now:hover {
+            background-color: white;
+            color: black;
+            border: 2px solid black;
+        }
+
+        .description {
+            margin-top: 30px;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="all product.html">All Products</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contactus.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="product-container">
+            <!-- Product Gallery -->
+            <div class="product-gallery">
+                <div class="main-image">
+                    <img src="https://res.cloudinary.com/dwen8lkxn/image/upload/v1737019643/download_zoizxy.jpg" alt="Hoverball">
+                </div>
+                <div class="alternate-images">
+                    <img src="https://res.cloudinary.com/dwen8lkxn/image/upload/v1737019640/download_1_r7vypv.jpg" alt="Lamp Alternate 1">
+                    <img src="https://res.cloudinary.com/dwen8lkxn/image/upload/v1737019641/images_3_vsuoad.jpg" alt="Lamp Alternate 1">
+                    <img src="https://res.cloudinary.com/dwen8lkxn/image/upload/v1737019642/images_2_jvyqal.jpg" alt="Lamp Alternate 1">
+                    <img src="https://res.cloudinary.com/dwen8lkxn/image/upload/v1737019643/download_zoizxy.jpg" alt="Lamp Alternate 1">
+                    <img src="https://res.cloudinary.com/dwen8lkxn/image/upload/v1737019644/download_5_y5bafa.jpg" alt="Lamp Alternate 1">
+                </div>
+            </div>
+
+            <!-- Product Details -->
+            <div class="product-details">
+                <h1>Hoverball</h1>
+                <p class="price">Rs. 1,200 <span class="original-price">Rs. 2,500</span></p>
+
+                <div class="short-description">
+                    <p><img src="https://res.cloudinary.com/dwen8lkxn/image/upload/v1737039791/s4_ephj6c.png" alt="Icon"style="width: 70px; height: auto;"> 7 Days Check Warranty</p>
+                    <p><img src="https://res.cloudinary.com/dwen8lkxn/image/upload/v1737039790/s5_ppmyeb.png" alt="Icon"style="width: 70px; height: auto;"> Best Price Guarante</p>
+                    <p><img src="https://res.cloudinary.com/dwen8lkxn/image/upload/v1737039791/s6_gtfgox.png" alt="Icon"style="width: 70px; height: auto;"> Free Cash on Delivery</p>
+                </div>
+
+                <!-- Quantity Selector -->
+                <div class="quantity-container">
+            <b> <label for="quantity">Quantity:</label></b>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1">
+                </div>
+
+                <div class="action-buttons">
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                    <a href="#" class="buy-now">Buy It Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Description -->
+        <section class="description">
+            <h2>Product Description:-</h2>
+            <p>G Shaped Lamp - Bluetooth Speaker & Wireless Charger 🌟
+
+                Discover the perfect blend of innovation and elegance with the G Shaped Lamp. This multifunctional marvel is designed to enhance your living space with its modern aesthetics and advanced features.
+                
+                Features:
+                <ul>
+            <li> Home Boredom Buster: Transform your living room into a dynamic playground with the Mirana Air Football Smart! Say goodbye to boredom and hello to endless fun.
+
+            </li>
+                
+            <li>For All Ages: Perfect for all ages, it’s your ticket to endless fun. It’s the perfect way to add some action to your life.</li>
+                
+            <li>Family Fun Time: Want to spend quality time with your family? Challenge them to a game of Air Football. It’s not just about winning; it’s about creating memories that will last a lifetime.</li>
+                
+            <li>Stress Buster: Long working hours got you down? Kick away your frustrations with the Mirana Air Football Smart. No matter how hard you kick, it stays on the surface, floating mysteriously and ready for the next round.</li>
+                
+            <li>Stress Buster: Long working hours got you down? Kick away your frustrations with the Mirana Air Football Smart. No matter how hard you kick, it stays on the surface, floating mysteriously and ready for the next round.</li>
+                
+               
+            </ul>
+               
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 E-commerce Store. All rights reserved.</p>
+    </footer>
+</body>
+</html>
